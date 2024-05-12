@@ -64,7 +64,7 @@ Vous savez probablement déjà qu'en C++, il est possible de déclarer des attri
 | Protégé | `protected:` | Non | Oui |
 | Privé | `public:` | Non | Non |
 
-#### Exercice
+#### Exercice
 
 Mettez-vous dans le dossier [ex02](ex02)
 
@@ -125,7 +125,7 @@ foo_ptr->coucou(1); // 'coucou'
 
 Et c'est là qu'interviennent les méthodes virtuelles que nous verrons dans le chapitre suivant.
 
-#### Exercice
+#### Exercice
 
 Mettez-vous dans le dossier [ex03](ex03)
 

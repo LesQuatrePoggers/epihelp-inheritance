@@ -2,7 +2,7 @@
 
 ## 2. Les méthodes virtuelles
 
-### 2.1. Régler le soucis du dernier chapitre
+### 2.1. Régler le soucis du dernier chapitre
 
 Pour régler le problème du chapitre précedent, il est nécessaire de déclarer la méthode *virtuelle* grâce au mot clef `virtual`.
 
@@ -43,7 +43,7 @@ Foo *foo_ptr = &bar;
 foo_ptr->coucou(1); // 'salutation'
 ```
 
-#### Exercice
+#### Exercice
 
 Mettez-vous dans le dossier [ex04](ex04)
 
@@ -59,7 +59,7 @@ Vous pouvez lancer les tests avec la commande suivante :
 make tests_run
 ```
 
-## 2.2. Les destructeurs virtuels
+### 2.2. Les destructeurs virtuels
 
 Lorsque l'on fait de l'héritage, il est nécessaire de faire attention à une chose en particulier : ne pas oublier de déclarer le destructeur de la classe parente `virtual`.
 
@@ -91,7 +91,7 @@ delete base;
 
 La dernière ligne de l'exemple n'appelera pas le destructeur de la classe dérivée. En effet, lorsque l'on demande de *free* la mémoire alloué par l'opérateur *new*, cela appelle le destructeur. Or, dans ce cas, étant donné que le destructeur n'a pas été declaré virtuelle, le compilateur ne connaît pas l'existence du destructeur de la classe `Derived`. C'est même pire que ça, c'est un comportement indéfini. Pour en savoir plus, je vous invite à aller lire [cette réponse](https://stackoverflow.com/a/461224).
 
-#### Exercice
+#### Exercice
 
 Mettez-vous dans le dossier [ex05](ex05)
 

@@ -15,3 +15,4 @@ Voici la liste des chapitres de ce cours :
 - [1. Introduction](chapter1/README.md)
 - [2. Les méthodes virtuelles](chapter2/README.md)
 - [3. Les types d'héritage (public, protected, private, virtual)](chapter3/README.md)
+- [4. Notion diverses](chapter4/README.md)

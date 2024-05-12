@@ -49,7 +49,7 @@ class PrivateDerived: private Base {
 };
 ```
 
-#### Exercice
+#### Exercice
 
 Il n'y a pas d'exercice pour cette section.
 

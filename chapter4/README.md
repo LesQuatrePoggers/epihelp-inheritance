@@ -2,7 +2,7 @@
 
 ## 4. Notion diverses
 
-### 4.1. Appelé une fonction membre de la classe parente
+### 4.1. Appeler une fonction membre de la classe parente
 
 Il est possible d'appeler une fonction membre de la classe parente depuis la classe dérivée. Pour cela, il suffit de préciser le nom de la classe parente suivi de l'opérateur de résolution de portée `::`.
 

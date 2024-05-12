@@ -62,7 +62,7 @@ Vous savez probablement déjà qu'en C++, il est possible de déclarer des attri
 |-----------------------|----------|-----------------------------------|----------------------------------|
 | Public | `public:` | Oui | Oui |
 | Protégé | `protected:` | Non | Oui |
-| Privé | `public:` | Non | Non |
+| Privé | `private:` | Non | Non |
 
 #### Exercice
 

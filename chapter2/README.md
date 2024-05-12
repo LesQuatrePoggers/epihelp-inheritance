@@ -113,7 +113,7 @@ Base *base = new Derived();
 delete base;
 ```
 
-La dernière ligne de l'exemple n'appelera pas le destructeur de la classe dérivée. En effet, lorsque l'on demande de *free* la mémoire alloué par l'opérateur *new*, cela appelle le destructeur. Or, dans ce cas, étant donné que le destructeur n'a pas été declaré virtuelle, le compilateur ne connaît pas l'existence du destructeur de la classe `Derived`. C'est même pire que ça, c'est un comportement indéfini. Pour en savoir plus, je vous invite à aller lire [cette réponse](https://stackoverflow.com/a/461224).
+La dernière ligne de l'exemple n'appelera pas le destructeur de la classe dérivée. En effet, lorsque l'on demande de *free* la mémoire alloué par l'opérateur *new*, cela appelle le destructeur. Or, dans ce cas, étant donné que le destructeur n'a pas été declaré virtuel, le compilateur ne connaît pas l'existence du destructeur de la classe `Derived`. C'est même pire que ça, c'est un comportement indéfini. Pour en savoir plus, je vous invite à aller lire [cette réponse](https://stackoverflow.com/a/461224).
 
 #### Exercice
 

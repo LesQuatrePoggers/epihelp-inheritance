@@ -10,3 +10,8 @@ En C++, l'héritage permet à une classe, appelée classe dérivée, d'hériter 
 ![Example of inheritance diagram](assets/inheritance-diagram-example.png)
 
 Cette relation parent-enfant offre un moyen puissant de réutiliser du code, de promouvoir la modulabilité, tout en permettant la spécialisation et l'extension du code.
+
+Voici la liste des chapitres de ce cours :
+- [1. Introduction](chapter1/README.md)
+- [2. Les méthodes virtuelles](chapter2/README.md)
+- [3. Les types d'héritage (public, protected, private, virtual)](chapter3/README.md)

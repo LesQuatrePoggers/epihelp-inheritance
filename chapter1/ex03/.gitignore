@@ -1,0 +1,8 @@
+# Exercice
+/build
+/ex03
+/solution_ex03
+
+# Clangd
+/.cache
+/compile_commands.json

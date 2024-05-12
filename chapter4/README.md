@@ -50,7 +50,7 @@ public:
 
 Il n'y a pas d'exercice pour cette section.
 
-### 4.2. Les classes abstraites
+### 4.2. Les classes abstraites et interfaces
 
 Une classe abstraite est une classe qui ne peut pas être instanciée. Elle est utilisée pour définir une interface commune à plusieurs classes dérivées. Pour déclarer une classe abstraite, il suffit de déclarer une ou plusieurs méthodes virtuelles pures en suffixant la déclaration de la méthode par `= 0`.
 
@@ -158,6 +158,49 @@ public:
     // }
 };
 ```
+
+#### Exercice
+
+Il n'y a pas d'exercice pour cette section.
+
+### 4.4. Les tables virtuelles et les 'fat pointers'
+
+Les tables virtuelles sont un mécanisme utilisé par les compilateurs pour implémenter le polymorphisme en C++. Lorsqu'une classe contient au moins une méthode virtuelle, le compilateur crée une table virtuelle pour cette classe. Cette table contient les adresses des méthodes virtuelles de la classe, ainsi que des informations supplémentaires pour permettre au programme de les appeler correctement.
+
+Les tables virtuelles sont stockées dans la mémoire de l'objet, un pointeur vers cette table est ajouté à l'objet. Ce pointeur est ce qu'on appelle un 'fat pointer', car il contient à la fois l'adresse de l'objet et l'adresse de la table virtuelle.
+
+Voici un exemple en code :
+
+```cpp
+class Base {
+public:
+    virtual void foo() const
+    {
+        std::cout << "Base::foo()" << std::endl;
+    }
+};
+
+class Derived: public Base {
+public:
+    void foo() const override
+    {
+        std::cout << "Derived::foo()" << std::endl;
+    }
+};
+
+int main()
+{
+    Derived derived;
+
+    // Ici, base_ptr est un 'fat pointer' qui contient à la fois l'adresse de l'objet 'derived' et l'adresse de la table virtuelle de la classe 'Derived'
+    Base *base_ptr = &derived;
+
+    base_ptr->foo(); // 'Derived::foo()'
+    return 0;
+}
+```
+
+Dans certain langages de programmation, tel que le Rust, les fat pointers sont désigné explicitement par le programmeur à l'aide du mot clef `dyn`.
 
 #### Exercice
 

@@ -43,6 +43,30 @@ Foo *foo_ptr = &bar;
 foo_ptr->coucou(1); // 'salutation'
 ```
 
+Lorsque l'on spécialise une méthode, il est possible de rajouter le suffixe `override` pour indiquer que l'on souhaite redéfinir une méthode de la classe parente. Cela permet de s'assurer que la méthode existe bien dans la classe parente.
+
+```cpp
+class Foo {
+public:
+    virtual void coucou(std::size_t times) const
+    {
+        for (; times != 0; times--)
+            std::cout << "coucou" << std::endl;
+    }
+};
+
+class Bar : public Foo {
+public:
+    void coucou(std::size_t times) const override
+    {
+        for (; times != 0; times--)
+            std::cout << "salutation" << std::endl;
+    }
+};
+```
+
+Ce qu'on vient de faire s'appelle du *polymorphisme*. C'est une des fonctionnalités les plus puissantes de la programmation orientée objet, et c'est ce qui est la clef de plusieurs *design patterns*.
+
 #### Exercice
 
 Mettez-vous dans le dossier [ex04](ex04)
